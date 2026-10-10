@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Inscripción a Curso - Desarrollo Web HTML5</title>
+</head>
+<body>
+
+  <header>
+    <h1>Inscripción a Curso de Capacitación</h1>
+    <p>Completá el siguiente formulario para registrarte en los cursos de formación profesional.</p>
+    
+    <figure>
+m     <img src="/tp1/curso.jpg" alt="Logo de la UNSa con cartel de Inscripción a Curso de Capacitación" width="350">
+      <figcaption>Universidad Nacional de Salta - Formación Profesional Continua</figcaption>
+    </figure>
+
+    <p>Para más detalles sobre los contenidos curriculares, visitá la página del <a href="https://www.unsa.edu.ar" target="_blank" rel="noopener">Programa de Capacitación Universitaria</a>.</p>
+  </header>
+
+  <hr>
+
+  <main>
+    <form action="https://httpbin.org/post" method="post">
+      
+      <fieldset>
+        <legend>Datos Personales</legend>
+        
+        <p>
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan">
+        </p>
+
+        <p>
+          <label for="apellido">Apellido:</label><br>
+          <input type="text" id="apellido" name="apellido" required placeholder="Ej. Pérez">
+        </p>
+
+        <p>
+          <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        </p>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Información de Contacto</legend>
+
+        <p>
+          <label for="email">Correo Electrónico:</label><br>
+          <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+        </p>
+
+        <p>
+          <label for="telefono">Teléfono:</label><br>
+          <input type="tel" id="telefono" name="telefono" required placeholder="3871234567">
+        </p>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Elección del Curso y Modalidad</legend>
+
+        <p>
+          <label for="curso">Seleccione el Curso:</label><br>
+          <select id="curso" name="curso" required>
+            <option value="">-- Seleccionar un curso --</option>
+            <optgroup label="Desarrollo Web y Software">
+              <option value="html5_css3">HTML5 y CSS3 Semántico</option>
+              <option value="javascript">JavaScript Moderno ES6+</option>
+              <option value="cpp">Programación en C++</option>
+            </optgroup>
+            <optgroup label="Base de Datos e Infraestructura">
+              <option value="mysql">Bases de Datos MySQL</option>
+              <option value="redes">Redes y Soporte Técnico</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <strong>Modalidad de cursado:</strong><br>
+          <input type="radio" id="presencial" name="modalidad" value="presencial" required>
+          <label for="presencial">Presencial</label><br>
+          
+          <input type="radio" id="virtual" name="modalidad" value="virtual">
+          <label for="virtual">Virtual</label>
+        </p>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Conocimientos Previos</legend>
+        <p>Seleccione sus conocimientos previos (puede seleccionar más de uno):</p>
+
+        <input type="checkbox" id="conocimiento_computacion" name="conocimientos[]" value="computacion_basica">
+        <label for="conocimiento_computacion">Manejo básico de PC / Computación</label><br>
+
+        <input type="checkbox" id="conocimiento_html" name="conocimientos[]" value="html">
+        <label for="conocimiento_html">HTML / Estructura Web</label><br>
+
+        <input type="checkbox" id="conocimiento_programacion" name="conocimientos[]" value="programacion">
+        <label for="conocimiento_programacion">Lógica de programación</label><br>
+
+        <input type="checkbox" id="conocimiento_ninguno" name="conocimientos[]" value="ninguno">
+        <label for="conocimiento_ninguno">Sin conocimientos previos</label>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Información Adicional</legend>
+        <p>
+          <label for="comentarios">Comentarios o consultas relativas a la inscripción:</label><br>
+          <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escriba aquí sus comentarios..."></textarea>
+        </p>
+      </fieldset>
+
+      <br>
+
+      <p>
+        <input type="checkbox" id="aceptar_condiciones" name="aceptar_condiciones" required>
+        <label for="aceptar_condiciones">Acepto los términos y condiciones de inscripción.</label>
+      </p>
+
+      <p>
+        <button type="submit">Enviar Inscripción</button>
+        <button type="reset">Restablecer Datos</button>
+      </p>
+
+    </form>
+  </main>
+  
+</body>
+</html>
